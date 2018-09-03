@@ -1,6 +1,5 @@
 const SHA256 = require('crypto-js/sha256');
-
-const DIFFICULTY = 4;
+const { DIFFICULTY } = require('../config');
 
 class Block {
     constructor(timestamp, lastHash, hash, data, nonce) {
@@ -26,8 +25,7 @@ class Block {
 
     static mineBlock(lastBlock, data) {
         let hash;
-        let timestamp;
-        
+        let timestamp;   
         const lastHash = lastBlock.hash;
         let nonce = 0;
         do {
