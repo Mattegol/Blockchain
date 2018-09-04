@@ -22,4 +22,7 @@ describe('Block', () => {
         expect(block.hash.substring(0, DIFFICULTY)).toEqual('0'.repeat(DIFFICULTY));
         console.log(block.toString());
     });
+
+    
+    
 });
